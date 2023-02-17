@@ -10,6 +10,7 @@ import plotly.express as px
 
 df = st.session_state['df']
 st.header('Product wise Analysis')
+st.header(column_name)
 def required_df(data,col):
     x = data[[col, 'Clients']]
     total_count = []
