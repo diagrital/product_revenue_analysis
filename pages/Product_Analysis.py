@@ -10,7 +10,7 @@ import plotly.express as px
 
 df = st.session_state['df']
 st.header('Product wise Analysis')
-st.header(column_name)
+
 def required_df(data,col):
     x = data[[col, 'Clients']]
     total_count = []
@@ -73,4 +73,5 @@ col = ['Diginews', 'DigiConnect OBD/IVR',
 column_name = st.sidebar.selectbox('Select Product',col,index = 0)
 
 figures = required_df(df,column_name)
+st.header(column_name)
 st.plotly_chart(figures[0])
