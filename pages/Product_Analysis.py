@@ -57,8 +57,7 @@ def required_df(data,col):
     pie_data['count'] = co
     pie_data['status'] = x['Status']
     # Create the pie chart
-    fig = px.pie(pie_data, values='count', names='Clients',color = 'status',hover_name='status',
-                 color_discrete_sequence=["yellow", "cyan"], 
+    fig = px.pie(pie_data, values='count', names='Clients',color = 'status',hover_name='status', 
                  hover_data=['percentage'], hole=0.7)
     fig.update_traces(textposition='outside', textinfo='label',textfont=dict(size=13))
 
