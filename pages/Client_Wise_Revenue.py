@@ -10,8 +10,8 @@ import plotly.express as px
 
 df = st.session_state['df']
 st.header('Client wise Revenue')
-upto = st.sidebar.slider('Top Customers',min_value = 0,max_value=50)
-to = st.sidebar.slider('Bottom Customers',min_value = 0,max_value=50)
+upto = st.sidebar.slider('Top Customers',min_value = 5,max_value=50)
+to = st.sidebar.slider('Bottom Customers',min_value = 5,max_value=50)
 
 revenue_data = df[['Clients','Revenue (in Rs.) (April 2022 to till date)']]
 
